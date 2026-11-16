@@ -25,6 +25,7 @@ public:
     std::string GetPassword() const { return password_; }
 
 private:
+    void ValidateOptions() const;
     COMMAND_TYPE command_;
     const std::unordered_map<std::string_view, COMMAND_TYPE> commandMapping_ = {
         {"encrypt", ProgramOptions::COMMAND_TYPE::ENCRYPT},
